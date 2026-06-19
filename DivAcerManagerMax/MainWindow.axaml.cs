@@ -389,21 +389,21 @@ public partial class MainWindow : Window, INotifyPropertyChanged
                 {
                     "low-power",
                     (_lowPowerProfileButton,
-                        "Prioritizes energy efficiency, reduces performance to extend battery life.", true, false)
+                        "Privilegia l'efficienza energetica, riduce le prestazioni per prolungare la batteria.", true, false)
                 },
-                { "quiet", (_quietProfileButton, "Minimizes noise, prioritizes low power and cooling.", false, true) },
+                { "quiet", (_quietProfileButton, "Minimizza il rumore, privilegia basso consumo e raffreddamento.", false, true) },
                 {
                     "balanced",
-                    (_balancedProfileButton, "Optimal mix of performance and noise for everyday tasks.", true, true)
+                    (_balancedProfileButton, "Mix ottimale di prestazioni e rumore per l'uso quotidiano.", true, true)
                 },
                 {
                     "balanced-performance",
-                    (_performanceProfileButton, "Maximizes speed for demanding workloads, higher fan noise", false,
+                    (_performanceProfileButton, "Massimizza la velocità per carichi pesanti, ventole più rumorose.", false,
                         true)
                 },
                 {
                     "performance",
-                    (_turboProfileButton, "Unleashes peak power for extreme tasks, loudest fans.", false, true)
+                    (_turboProfileButton, "Potenza massima per attività estreme, ventole al massimo.", false, true)
                 }
             };
 
@@ -448,7 +448,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
         IsCalibrating = isCalibrating;
         SetEnabled(_startCalibrationButton, !isCalibrating);
         SetEnabled(_stopCalibrationButton, isCalibrating);
-        SetText(_calibrationStatusTextBlock, isCalibrating ? "Status: Calibrating" : "Status: Not calibrating");
+        SetText(_calibrationStatusTextBlock, isCalibrating ? "Stato: In calibrazione" : "Stato: Non in calibrazione");
 
         SetCheckBox(_bootAnimAndSoundCheckBox, IsEnabledSetting(_settings.BootAnimationSound));
         SetCheckBox(_lcdOverrideCheckBox, IsEnabledSetting(_settings.LcdOverride));
@@ -715,7 +715,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             }
 
             if (_thermalProfileInfoText != null)
-                _thermalProfileInfoText.Text = "Minimizes noise, prioritizes low power and cooling.";
+                _thermalProfileInfoText.Text = "Minimizza il rumore, privilegia basso consumo e raffreddamento.";
         }
         else
         {
@@ -724,10 +724,10 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             if (_thermalProfileInfoText != null)
                 _thermalProfileInfoText.Text = profile switch
                 {
-                    "low-power" => "Prioritizes energy efficiency, reduces performance to extend battery life.",
-                    "balanced" => "Optimal mix of performance and noise for everyday tasks.",
-                    "balanced-performance" => "Maximizes speed for demanding workloads, higher fan noise",
-                    "performance" => "Unleashes peak power for extreme tasks, loudest fans.",
+                    "low-power" => "Privilegia l'efficienza energetica, riduce le prestazioni per prolungare la batteria.",
+                    "balanced" => "Mix ottimale di prestazioni e rumore per l'uso quotidiano.",
+                    "balanced-performance" => "Massimizza la velocità per carichi pesanti, ventole più rumorose.",
+                    "performance" => "Potenza massima per attività estreme, ventole al massimo.",
                     _ => _thermalProfileInfoText.Text
                 };
         }
@@ -835,7 +835,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             await _client.SetBatteryCalibrationAsync(true);
             if (_startCalibrationButton != null) _startCalibrationButton.IsEnabled = false;
             if (_stopCalibrationButton != null) _stopCalibrationButton.IsEnabled = true;
-            if (_calibrationStatusTextBlock != null) _calibrationStatusTextBlock.Text = "Status: Calibrating";
+            if (_calibrationStatusTextBlock != null) _calibrationStatusTextBlock.Text = "Stato: In calibrazione";
         }
     }
 
@@ -846,7 +846,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
             await _client.SetBatteryCalibrationAsync(false);
             if (_startCalibrationButton != null) _startCalibrationButton.IsEnabled = true;
             if (_stopCalibrationButton != null) _stopCalibrationButton.IsEnabled = false;
-            if (_calibrationStatusTextBlock != null) _calibrationStatusTextBlock.Text = "Status: Not calibrating";
+            if (_calibrationStatusTextBlock != null) _calibrationStatusTextBlock.Text = "Stato: Non in calibrazione";
         }
     }
 

@@ -6,126 +6,126 @@
   Div Acer Manager Max
 </h1>
 
-**Div Acer Manager Max** is a feature-rich Linux GUI utility for Acer laptops powered by the incredible [Linuwu Sense](https://github.com/0x7375646F/Linuwu-Sense) drivers. It replicates and expands on Acer’s NitroSense and PredatorSense capabilities on Linux with full fan control, performance modes, battery optimization, backlight settings, and more — all wrapped in a modern Avalonia-based UI.
+**Div Acer Manager Max** è un'utility Linux ricca di funzionalità per laptop Acer, basata sugli incredibili driver [Linuwu Sense](https://github.com/0x7375646F/Linuwu-Sense). Replica e amplia le funzionalità di NitroSense e PredatorSense di Acer su Linux con controllo completo delle ventole, modalità prestazioni, ottimizzazione batteria, impostazioni retroilluminazione e altro — il tutto in una moderna interfaccia basata su Avalonia.
 
 > [!CAUTION]
-> Project is under passive development.
+> Il progetto è in sviluppo passivo.
 
 ![Title Image](https://github.com/user-attachments/assets/a60898a6-a2b8-432e-b5a2-8d0a45c63484)
 
 <h4 align="center">
-⭐ Please star this repository to show support. It motivates me to make the project better for everyone
+⭐ Metti una stella a questa repository per mostrare supporto. Mi motiva a migliorare il progetto per tutti
 </h4>  
 
-## ✨ Features
+## ✨ Funzionalità
 
-### ✅ Fully Implemented
+### ✅ Completamente implementate
 
-* 🔋 **Performance / Thermal Profiles**
-  Eco, Silent, Balanced, Performance, Turbo — automatically adjusted based on AC/battery status
-  (e.g., Turbo hidden when on battery or unsupported)
+* 🔋 **Profili prestazioni / termici**
+  Eco, Silenzioso, Bilanciato, Prestazioni, Turbo — regolati automaticamente in base allo stato alimentazione/batteria
+  (es. Turbo nascosto quando su batteria o non supportato)
 
-* 🌡 **Fan Control**
-  Manual and Auto fan speed modes
-  Manual disabled automatically when in Quiet profile
+* 🌡 **Controllo ventole**
+  Modalità velocità manuale e automatica
+  Manuale disabilitata automaticamente nel profilo Silenzioso
 
-* 💡 **LCD Override Setting**
-  Direct control over LCD power behavior
+* 💡 **Override LCD**
+  Controllo diretto del comportamento energetico LCD
 
-* 🎨 **Keyboard Backlight Timeout Control**
-  Customize the keyboard backlight timeout
+* 🎨 **Timeout retroilluminazione tastiera**
+  Personalizza il timeout della retroilluminazione tastiera
 
-* 🔊 **Boot Animation and Sound Toggle**
-  Enable/disable Acer's startup animations and sounds
+* 🔊 **Animazione e suono di avvio**
+  Abilita/disabilita le animazioni e i suoni di avvio Acer
 
-* 💻 **Live System Info Display**
-  Shows real-time performance profile, fan settings, calibration state, and more
+* 💻 **Informazioni sistema in tempo reale**
+  Mostra profilo prestazioni, impostazioni ventole, stato calibrazione e altro in tempo reale
 
-* 🧠 **Smart Daemon (Low Resource Use)**
+* 🧠 **Daemon intelligente (basso consumo risorse)**
 
-  * Auto-detects feature support per device
-  * Communicates with GUI in real-time
-  * Lightweight: uses \~10MB RAM
-  * Can run **independently** of GUI
-  * Recursive restart to fix software issues similar to those on Windows
+  * Rileva automaticamente le funzionalità supportate per dispositivo
+  * Comunica con la GUI in tempo reale
+  * Leggero: usa ~10MB di RAM
+  * Può funzionare **indipendentemente** dalla GUI
+  * Riavvio ricorsivo per risolvere problemi software simili a quelli su Windows
 
-* 🖥️ **Modern GUI**
+* 🖥️ **GUI moderna**
 
-  * Avalonia-based, clean and responsive
-  * Realtime Monitoring with Dashboard and accurate Tempreature Readings
-  * Dynamic UI hides unsupported features
-  * Real-time feedback from daemon
+  * Basata su Avalonia, pulita e reattiva
+  * Monitoraggio in tempo reale con Dashboard e letture temperature accurate
+  * L'interfaccia nasconde dinamicamente le funzionalità non supportate
+  * Feedback in tempo reale dal daemon
 
-## 🧭 Compatibility
+## 🧭 Compatibilità
 
-Check your device's compatibility here: [Compatibility List](https://github.com/PXDiv/Div-Acer-Manager-Max/blob/main/Compatibility.md)
+Controlla la compatibilità del tuo dispositivo qui: [Lista compatibilità](https://github.com/PXDiv/Div-Acer-Manager-Max/blob/main/Compatibility.md)
 
-> Even if not here, DAMX will still work on most devices. Please file a issue on Linuwu-sense page (it will be ignored here)
+> Anche se non presente nella lista, DAMX funzionerà sulla maggior parte dei dispositivi. Apri un issue sulla pagina di Linuwu-Sense (qui verrà ignorato)
 
-## 🖥️ DAMX Installation Guide
+## 🖥️ Guida all'installazione di DAMX
 
-You can install DAMX using either of the following methods:
+Puoi installare DAMX usando uno dei seguenti metodi:
 
-### 🔗 Remote Installation
+### 🔗 Installazione remota
 
-1. Open a terminal window.
+1. Apri una finestra del terminale.
 
-2. Run the following command:
+2. Esegui il seguente comando:
 
    ```bash
    curl -fsSL https://raw.githubusercontent.com/PXDiv/Div-Acer-Manager-Max/refs/heads/main/scripts/remoteSetup.sh -o /tmp/setup.sh && sudo bash /tmp/setup.sh
    ```
 
-3. Follow the on-screen prompts.
+3. Segui le istruzioni a schermo.
 
-4. Done!
+4. Fatto!
 
-### 📦 Local Installation (Alternative Method)
+### 📦 Installazione locale (metodo alternativo)
 
-If the remote installation fails for some reason or you've gone offline, follow these steps:
+Se l'installazione remota fallisce o sei offline, segui questi passaggi:
 
-1. Download the latest release from the **Releases** section.
+1. Scarica l'ultima release dalla sezione **Releases**.
 
-2. Extract the downloaded package.
+2. Estrai il pacchetto scaricato.
 
-3. Make the `setup.sh` script executable:
+3. Rendi eseguibile lo script `setup.sh`:
 
    ```bash
    chmod +x setup.sh
    ```
 
-4. Run the script:
+4. Esegui lo script:
 
-   * Right-click the setup file and choose **“Run in Terminal”**,
-     or open a terminal in the folder and run:
+   * Fai clic destro sul file setup e scegli **"Esegui nel terminale"**,
+     oppure apri un terminale nella cartella ed esegui:
 
      ```bash
      ./setup.sh
      ```
 
-5. When prompted, choose an option from the menu:
+5. Quando richiesto, scegli un'opzione dal menu:
 
-   * `1` → Install
-   * `2` → Install without Drivers
-   * `3` → Uninstall
-   * `4` → Reinstall/Update
+   * `1` → Installa
+   * `2` → Installa senza driver
+   * `3` → Disinstalla
+   * `4` → Reinstalla/Aggiorna
 
-6. Reboot your system after the installation completes.
+6. Riavvia il sistema dopo il completamento dell'installazione.
 
-✅ That’s it—you’re all set!
+✅ Tutto qui — sei pronto!
 
-## 🖥️ Troubleshooting
+## 🖥️ Risoluzione problemi
 
-You can check the logs at /var/log/DAMX_Daemon_Log.log
+Puoi controllare i log in /var/log/DAMX_Daemon_Log.log
 
-If you get UNKNOWN as Laptop type, try restarting (it happens sometimes)
-But if it still happens that might mean the Drivers Installation failed, Make sure you have the appropriate kernel headers to compile the drivers.
+Se ottieni UNKNOWN come tipo di laptop, prova a riavviare (succede a volte).
+Se continua a succedere, potrebbe significare che l'installazione dei driver è fallita. Assicurati di avere gli header del kernel appropriati per compilare i driver.
 
-Also, check out the [FAQ page](https://github.com/PXDiv/Div-Acer-Manager-Max/blob/main/FAQ.md) before opening any issues.
+Consulta anche la [pagina FAQ](https://github.com/PXDiv/Div-Acer-Manager-Max/blob/main/FAQ.md) prima di aprire qualsiasi issue.
 
-Please open a new issue or discussion and include the logs to get support and help the project grow if you need any info, report a bug or just give ideas for the future versions of DAMX
+Apri una nuova issue o discussione e includi i log per ottenere supporto e aiutare il progetto a crescere se hai bisogno di informazioni, vuoi segnalare un bug o semplicemente dare idee per le versioni future di DAMX.
 
-## Screenshots
+## Screenshot
 
 ![image](https://github.com/user-attachments/assets/10d44e8c-14e4-4441-b60c-538af1840cf6)
 ![image](https://github.com/user-attachments/assets/89217b26-b94c-4c78-8fe8-3de2b22a7095)
@@ -134,15 +134,15 @@ Please open a new issue or discussion and include the logs to get support and he
 
 ## ❤️ Powered by Linuwu
 
-The custom drivers for this project [Div-Linuwu Sense project](https://github.com/PXDiv/Div-Linuwu-Sense) is built entirely on top of the [Linuwu Sense](https://github.com/0x7375646F/Linuwu-Sense) drivers — huge thanks to their developers for enabling hardware-level access on Acer laptops.
+I driver personalizzati per questo progetto [Div-Linuwu Sense](https://github.com/PXDiv/Div-Linuwu-Sense) sono costruiti interamente sopra i driver [Linuwu Sense](https://github.com/0x7375646F/Linuwu-Sense) — un enorme ringraziamento ai loro sviluppatori per aver reso possibile l'accesso hardware sui laptop Acer.
 
-## 🤝 Contributing
+## 🤝 Contribuire
 
-* Report bugs or request features via GitHub Issues
-* Submit pull requests to improve code or UI
-* Help test on different Acer laptop models
+* Segnala bug o richiedi funzionalità tramite GitHub Issues
+* Invia pull request per migliorare il codice o l'interfaccia
+* Aiuta a testare su diversi modelli di laptop Acer
 
-## 📄 License
+## 📄 Licenza
 
-This project is licensed under the **GNU General Public License v3.0**.  
-See the [LICENSE](LICENSE) file for details.
+Questo progetto è rilasciato sotto la **GNU General Public License v3.0**.  
+Vedi il file [LICENSE](LICENSE) per i dettagli.

@@ -58,7 +58,7 @@
 
 ## 🧭 Compatibilità
 
-Controlla la compatibilità del tuo dispositivo qui: [Lista compatibilità](https://github.com/PXDiv/Div-Acer-Manager-Max/blob/main/Compatibility.md)
+Controlla la compatibilità del tuo dispositivo qui: [Lista compatibilità](Compatibility.md)
 
 > Anche se non presente nella lista, DAMX funzionerà sulla maggior parte dei dispositivi. Apri un issue sulla pagina di Linuwu-Sense (qui verrà ignorato)
 
@@ -121,7 +121,7 @@ Puoi controllare i log in /var/log/DAMX_Daemon_Log.log
 Se ottieni UNKNOWN come tipo di laptop, prova a riavviare (succede a volte).
 Se continua a succedere, potrebbe significare che l'installazione dei driver è fallita. Assicurati di avere gli header del kernel appropriati per compilare i driver.
 
-Consulta anche la [pagina FAQ](https://github.com/PXDiv/Div-Acer-Manager-Max/blob/main/FAQ.md) prima di aprire qualsiasi issue.
+Consulta anche la [pagina FAQ](FAQ.md) prima di aprire qualsiasi issue.
 
 Apri una nuova issue o discussione e includi i log per ottenere supporto e aiutare il progetto a crescere se hai bisogno di informazioni, vuoi segnalare un bug o semplicemente dare idee per le versioni future di DAMX.
 
